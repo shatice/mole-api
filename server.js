@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = 4000;
+const PORT = process.env.PORT;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./DB.js');
@@ -26,5 +26,5 @@ app.use(bodyParser.json());
 app.use('/profiles', profileRoutes);
 
 app.listen(PORT, function() {
-  console.log('Server is running on Port:', PORT);
+  console.log('Server is running on Port:',PORT);
 });

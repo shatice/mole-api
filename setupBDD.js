@@ -4,7 +4,7 @@ const Profile = require('./profile.model');
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://heroku_337d5ms4:28tpfr2ahi19e0q22dup89cgqb@ds111072.mlab.com:11072/heroku_337d5ms4', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
