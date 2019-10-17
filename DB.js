@@ -1,3 +1,4 @@
 module.exports = {
-  DB: 'mongodb://localhost:27017/mole-people'
+  DB: process.env.MONGODB_URI
 };
+
